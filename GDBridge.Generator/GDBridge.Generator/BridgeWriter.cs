@@ -32,7 +32,7 @@ class BridgeWriter
                 .WriteLine(
                     $"""
                      get => GdObject.Get("{variable.Name}"){GetTypeCast(variable.Type)};
-                     set => GdObject.Set("{variable.Name}", value);
+                     set => GdObject.Set("{variable.Name}", Godot.Variant.From(value));
                      """)
                 .CloseBlock()
                 .WriteEmptyLines(1);
