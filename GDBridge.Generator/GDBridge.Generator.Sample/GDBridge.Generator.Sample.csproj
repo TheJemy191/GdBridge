@@ -4,11 +4,22 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <RootNamespace>GDBridge.Generator.Sample</RootNamespace>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\GDBridge\GDBridge.csproj" />
         <ProjectReference Include="..\GDBridge.Generator\GDBridge.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="GodotSharp" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>

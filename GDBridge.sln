@@ -1,9 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDBridge", "GDBridge\GDBridge.csproj", "{BEC695B9-9E07-42A9-A8E8-57A6CABD99F0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDBridge.Test", "GDBridge.Test\GDBridge.Test.csproj", "{294CFEF5-1640-419C-91BD-9222602B0237}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDBridge.Generator", "GDBridge.Generator\GDBridge.Generator\GDBridge.Generator.csproj", "{17ACFB47-54AA-42FA-A473-F3273BB232AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDBridge.Generator.Sample", "GDBridge.Generator\GDBridge.Generator.Sample\GDBridge.Generator.Sample.csproj", "{C94D4F4A-B1F6-40F8-B74D-04EAE0AC5D45}"

@@ -6,7 +6,7 @@ namespace GDBridge.Generator;
 
 static class Extensions
 {
-    public static string ToCSharpTypeString(this GdType type, ICollection<AvailableType> availableTypes) => (type.BuiltInType switch
+    public static string ToCSharpTypeString(this GdType type, IEnumerable<AvailableType> availableTypes) => (type.BuiltInType switch
     {
         GdBuiltInType.@int => "long",
         GdBuiltInType.@float => "double",
@@ -47,7 +47,7 @@ static class Extensions
         _ when type.IsBuiltIn => $"{type.BuiltInType.ToString()}",
         _  => GetTypeName(type, availableTypes)
     });
-    static string GetTypeName(GdType type, ICollection<AvailableType> availableTypes)
+    static string GetTypeName(GdType type, IEnumerable<AvailableType> availableTypes)
     {
         var csharpType = availableTypes.FirstOrDefault(t => t.Name == type.TypeString!);
         if(csharpType is null)
@@ -59,7 +59,7 @@ static class Extensions
         return $"{csharpType.Namespace}.{csharpType.Name}";
     }
 
-    static string GetGDArrayString(GdType type, ICollection<AvailableType> availableTypes)
+    static string GetGDArrayString(GdType type, IEnumerable<AvailableType> availableTypes)
     {
         if (type is { IsTypedArray: true, ArrayType.IsBuiltIn: true } || availableTypes.Any(t => t.Name == type.ArrayType?.TypeString!))
             return $"Godot.Collections.Array<{type.ArrayType!.ToCSharpTypeString(availableTypes)}>";

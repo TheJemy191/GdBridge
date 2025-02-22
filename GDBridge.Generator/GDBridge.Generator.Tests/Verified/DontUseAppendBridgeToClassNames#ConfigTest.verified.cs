@@ -1,10 +1,10 @@
-﻿//HintName: ConfigTestBridge.cs
+﻿//HintName: ConfigTest.cs
 using GDBridge;
 using Godot;
 
-public partial class ConfigTestBridge : GDScriptBridge
+public partial class ConfigTest : GDScriptBridge
 {
-    public ConfigTestBridge(GodotObject gdObject) : base(gdObject) {}
+    public ConfigTest(GodotObject gdObject) : base(gdObject) {}
 
     public const string GDClassName = "ConfigTest";
 
